@@ -3,7 +3,7 @@
  */
 import Loadable from 'react-loadable'
 
-import { LoadingIndicator } from 'components/atom'
+import { LoadingIndicator } from 'components/molecule'
 
 export default Loadable({
   loader: () => import('./index'),

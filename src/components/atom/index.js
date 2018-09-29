@@ -1,3 +1,3 @@
-import LoadingIndicator from './LoadingIndicator'
+import { H1 } from './H1'
 
-export { LoadingIndicator }
+export { H1 }
