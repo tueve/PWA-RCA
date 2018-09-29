@@ -8,7 +8,8 @@
     "react-helmet": "^5.2.0",
     "react-loadable": "^5.5.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "styled-components": "^3.4.9"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -16,7 +17,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "standard --verbose | snazzy",
-    "fix": "standard --fix"
+    "fix": "standard --fix",
+    "lint:css": "stylelint './src/**/*.js'"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
@@ -25,7 +27,12 @@
     "husky": "^1.0.0-rc.15",
     "lint-staged": "^7.3.0",
     "prettier": "1.14.3",
-    "standard": "^12.0.1"
+    "standard": "^12.0.1",
+    "stylelint": "^9.6.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.4.0"
   },
   "lint-staged": {
     "*.{js,json,css}": [
@@ -49,5 +56,14 @@
       "browser": true
     },
     "parser": "babel-eslint"
+  },
+  "stylelint": {
+    "processors": [
+      "stylelint-processor-styled-components"
+    ],
+    "extends": [
+      "stylelint-config-recommended",
+      "stylelint-config-styled-components"
+    ]
   }
 }
