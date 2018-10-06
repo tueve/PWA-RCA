@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
-import { mailFolderListItems, otherMailFolderListItems } from './titleData'
+import { mailFolderListItems } from './titleData'
 
 class PersistentDrawer extends Component {
   state = {
@@ -36,8 +36,6 @@ class PersistentDrawer extends Component {
         </div>
         <Divider />
         <List>{mailFolderListItems}</List>
-        <Divider />
-        <List>{otherMailFolderListItems}</List>
       </Drawer>
     )
 
