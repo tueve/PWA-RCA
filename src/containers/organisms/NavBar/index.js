@@ -1,22 +1,22 @@
 import React, { Component } from 'react'
-import { Grid, Hidden, withWidth } from '@material-ui/core'
-import { NavItem } from 'components/atoms'
+import { Hidden, withWidth } from '@material-ui/core'
+import { NavWrapper, NavItemWrapper, NavItem } from './style'
 
 class NavBar extends Component {
   render () {
     return (
       <Hidden xsDown>
-        <Grid container justify={'flex-end'} alignItems={'center'}>
-          <Grid item xs={2}>
+        <NavWrapper container justify={'flex-end'} alignItems={'center'}>
+          <NavItemWrapper item xs={2}>
             <NavItem>HOME</NavItem>
-          </Grid>
-          <Grid item xs={2}>
+          </NavItemWrapper>
+          <NavItemWrapper item xs={2}>
             <NavItem>PROJECTS</NavItem>
-          </Grid>
-          <Grid item xs={2}>
+          </NavItemWrapper>
+          <NavItemWrapper item xs={2}>
             <NavItem>ABOUT</NavItem>
-          </Grid>
-        </Grid>
+          </NavItemWrapper>
+        </NavWrapper>
       </Hidden>
     )
   }

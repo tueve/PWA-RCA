@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 const Logo = styled.img`
-  width: 120px;
-  height: 120px;
-  margin: 10px 30px;
+  width: 60px;
+  height: 60px;
+  margin: 5px 30px;
 `
 
 export default Logo
