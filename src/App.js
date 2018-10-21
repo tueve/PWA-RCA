@@ -1,30 +1,38 @@
-import React, { Component, Fragment } from 'react'
+/**
+ *
+ * App
+ *
+ * This component is the skeleton around the actual pages, and should only
+ * contain code that should be seen on all pages. (e.g. navigation bar)
+ */
+
+import React from 'react'
 import { Helmet } from 'react-helmet'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import Home from 'pages/Home'
+import HomePage from 'containers/pages/HomePage/Loadable'
+import NotFoundPage from 'containers/pages/NotFoundPage/Loadable'
+import Header from 'containers/layout/Header'
+import { Grid } from '@material-ui/core'
+// import Footer from 'components/Footer';
 
-class App extends Component {
-  render () {
-    return (
-      <Fragment>
-        <Helmet
-          titleTemplate='React.js Boilerplate CRA PWA'
-          defaultTitle='React.js Boilerplate CRA PWA'
-        >
-          <meta
-            name='description'
-            content='A pwa React.js Boilerplate application'
-          />
-        </Helmet>
-        <Router>
-          <Switch>
-            <Route exact path='/' component={Home} />
-          </Switch>
-        </Router>
-      </Fragment>
-    )
-  }
+export default function App () {
+  return (
+    <Grid container>
+      <Helmet
+        titleTemplate='%s - React.js Boilerplate'
+        defaultTitle='React.js Boilerplate'
+      >
+        <meta name='description' content='A React.js Boilerplate application' />
+      </Helmet>
+      <Header />
+      <Router>
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route path='' component={NotFoundPage} />
+        </Switch>
+      </Router>
+      {/* <Footer /> */}
+    </Grid>
+  )
 }
-
-export default App
